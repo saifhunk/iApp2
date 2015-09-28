@@ -34,6 +34,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfReEnterPassword;
 @property (weak, nonatomic) IBOutlet UIView *viewMale;
 @property (weak, nonatomic) IBOutlet UIView *viewFemale;
+@property (weak, nonatomic) IBOutlet UITextField *tfCity;
+@property (weak, nonatomic) IBOutlet UITextField *tfCountry;
+@property (weak, nonatomic) IBOutlet UITextField *tfState;
 
 #pragma mark - button actions
 

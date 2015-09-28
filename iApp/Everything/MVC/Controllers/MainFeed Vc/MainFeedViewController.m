@@ -133,6 +133,9 @@
 }
 
 - (IBAction)actionBtnProfile:(id)sender {
+    CategoryViewConroller * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryViewConroller"];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 - (IBAction)actionBnFilter:(id)sender {

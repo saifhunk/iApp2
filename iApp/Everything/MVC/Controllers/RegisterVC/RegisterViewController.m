@@ -8,7 +8,7 @@
 
 #import "RegisterViewController.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -65,6 +65,9 @@
     
     _tfName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Name" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    _tfCity.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"City" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    _tfState.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"State/Provinces" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    _tfCountry.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Country" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     _tfReEnterPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Re-enter Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [_btnMale setTitle:@"Male" forState:UIControlStateNormal];
@@ -78,6 +81,12 @@
     
     [self.view endEditing:YES];
 }
+
+//-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+//    
+//    [textField resignFirstResponder];
+//    return YES;
+//}
 
 #pragma mark - AlertView
 
