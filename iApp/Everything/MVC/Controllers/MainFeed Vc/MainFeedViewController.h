@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Header.h"
 #import "MainFeedCollectionViewCellTop.h"
+#import "PostViewController.h"
 
 
 @interface MainFeedViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,JournlistClicked>

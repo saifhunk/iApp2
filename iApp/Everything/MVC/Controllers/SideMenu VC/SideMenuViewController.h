@@ -24,10 +24,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnJournalist;
 @property (weak, nonatomic) IBOutlet UIButton *btnNotifiaction;
 @property (weak, nonatomic) IBOutlet UIButton *btnSettings;
+@property (weak, nonatomic) IBOutlet UIButton *btnFeed;
 
 
 #pragma mark - button actions
 
+- (IBAction)actionBtnFeed:(id)sender;
 
 - (IBAction)actionBtnProfile:(id)sender;
 

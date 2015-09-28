@@ -78,6 +78,11 @@
     [self.sideMenuViewController hideMenuViewController];
 }
 
+- (IBAction)actionBtnFeed:(id)sender {
+    
+    [self setViewController:SegueFeed];
+}
+
 - (IBAction)actionBtnProfile:(id)sender {
     
     [self setViewController:SegueProfileVc];

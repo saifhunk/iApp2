@@ -80,6 +80,11 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    [self performSegueWithIdentifier:@"SegueWebsite" sender:self];
+}
+
 #pragma mark - tableView Deleagtes
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;

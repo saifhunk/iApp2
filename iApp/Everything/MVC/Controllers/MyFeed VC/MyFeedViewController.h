@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Header.h"
+#import "PostViewController.h"
+
 
 @interface MyFeedViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -30,5 +32,6 @@
 - (IBAction)actionBtnSettings:(id)sender;
 
 - (IBAction)actionBtnAddPost:(id)sender;
+- (IBAction)actionSidepanel:(id)sender;
 
 @end

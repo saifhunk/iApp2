@@ -99,7 +99,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:SeguePost sender:self];
+    PostViewController * VC = [self.storyboard instantiateViewControllerWithIdentifier:@"PostViewController"];
+    [self presentViewController:VC animated:YES completion:nil];
 }
 
 

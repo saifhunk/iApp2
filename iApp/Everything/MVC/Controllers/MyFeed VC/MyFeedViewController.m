@@ -41,10 +41,10 @@
 {
     _arrayDataBottom = [[NSArray alloc]initWithObjects:@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg", nil];
     _arrayDataTop = [[NSArray alloc]initWithObjects:@"5.jpg",@"3.jpg",@"4.jpg",@"1.jpg",@"2.jpg", nil];
-    _imageViewPerson.layer.cornerRadius = _imageViewPerson.frame.size.height/2;
-    _viewBackgroundImage.layer.cornerRadius = _viewBackgroundImage.frame.size.height/2;
-    _viewBackgroundImage.layer.borderWidth = 2.0f;
-    _viewBackgroundImage.layer.borderColor = [UIColor whiteColor].CGColor;
+//    _imageViewPerson.layer.cornerRadius = _imageViewPerson.frame.size.height/2;
+//    _viewBackgroundImage.layer.cornerRadius = _viewBackgroundImage.frame.size.height/2;
+//    _viewBackgroundImage.layer.borderWidth = 2.0f;
+//    _viewBackgroundImage.layer.borderColor = [UIColor whiteColor].CGColor;
     
 }
 
@@ -101,7 +101,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:SeguePost sender:self];
+    
+    PostViewController * VC = [self.storyboard instantiateViewControllerWithIdentifier:@"PostViewController"];
+    [self presentViewController:VC animated:YES completion:nil];
 }
 
 
@@ -130,5 +132,11 @@
 }
 
 - (IBAction)actionBtnAddPost:(id)sender {
+}
+
+- (IBAction)actionSidepanel:(id)sender {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"iApp_sidePanelOpen" object:nil];
+
 }
 @end

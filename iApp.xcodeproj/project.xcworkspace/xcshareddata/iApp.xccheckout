@@ -12,20 +12,24 @@
 	<dict>
 		<key>2DA6865717B07653AA9AC61208A20976C7FA08EC</key>
 		<string>https://github.com/saifhunk/iApp.git</string>
+		<key>9D1F039CA6B1516A171C11275ACE4BA1BA990CAA</key>
+		<string>https://github.com/saifhunk/iApp2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2DA6865717B07653AA9AC61208A20976C7FA08EC</key>
+		<string>../../../iApp</string>
+		<key>9D1F039CA6B1516A171C11275ACE4BA1BA990CAA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/saifhunk/iApp.git</string>
+	<string>https://github.com/saifhunk/iApp2.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2DA6865717B07653AA9AC61208A20976C7FA08EC</string>
+	<string>9D1F039CA6B1516A171C11275ACE4BA1BA990CAA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>2DA6865717B07653AA9AC61208A20976C7FA08EC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iApp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9D1F039CA6B1516A171C11275ACE4BA1BA990CAA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iApp2</string>
 		</dict>
 	</array>
 </dict>

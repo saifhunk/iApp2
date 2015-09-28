@@ -10,8 +10,8 @@
 
 //main feed
 #define SeguePost @"SeguePost"
+#define SegueFeed @"MainFeedViewController"
 #define SegueJournalist @"SegueJournalist"
-#define SeguePost @"SeguePost"
 #define SegueProfileVc @"MyFeedViewController"
 #define SegueAddPostVc @"NewPostViewController"
 #define SegueEyeWitnessVc @"EyeWitnessViewController"
