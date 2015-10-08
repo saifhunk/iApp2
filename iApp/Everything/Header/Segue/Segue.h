@@ -18,4 +18,6 @@
 #define SegueJornalistVc @"JournalistViewController"
 #define SegueNotificationVc @"NotificationViewController"
 #define SegueSettingVc @"SettingVcViewController"
+#define SegueFreindsListVc @"FriendListViewController"
+#define SegueFollowVc @"FollowListViewController"
 

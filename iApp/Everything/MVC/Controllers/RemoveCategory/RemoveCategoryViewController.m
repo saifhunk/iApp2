@@ -31,17 +31,18 @@
 -(void)setupNavigationBar
 {
     _labelHeading.text = _strHeader;
+    _labelHeading.textColor = AppBlueColor;
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.tintColor = AppGreenColor;
+    self.navigationController.navigationBar.tintColor = AppBlueColor;
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Remove" style:UIBarButtonItemStylePlain target:self action:@selector(BtnRemoveClicked:)];
     [anotherButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                            [UIFont fontWithName:@"Helvetica" size:18.0], NSFontAttributeName,
-                                           AppGreenColor, NSForegroundColorAttributeName,
+                                           AppBlueColor, NSForegroundColorAttributeName,
                                            nil]
                                  forState:UIControlStateNormal];
     

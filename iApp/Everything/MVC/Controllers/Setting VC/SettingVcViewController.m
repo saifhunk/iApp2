@@ -22,7 +22,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     [self setupNavigationBar];
 
 }
@@ -46,7 +45,7 @@
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.tintColor = AppGreenColor;
+    self.navigationController.navigationBar.tintColor = AppBlueColor;
 }
 
 - (IBAction)actionbtnSidePanel:(id)sender {

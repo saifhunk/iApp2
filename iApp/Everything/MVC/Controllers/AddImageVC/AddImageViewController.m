@@ -118,7 +118,6 @@ NSData * signUpImageData;
     
     signUpImageData = UIImageJPEGRepresentation(image, 0);
     [_btnProfileImage setImage:image forState:UIControlStateNormal];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 

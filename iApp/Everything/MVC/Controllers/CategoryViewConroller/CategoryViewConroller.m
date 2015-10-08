@@ -73,7 +73,7 @@
     }
     
         cell.labelCategoryName.text = [_arrayCategories objectAtIndex:indexPath.row];
-        
+        cell.labelCategoryName.textColor = AppBlueColor;
     
     return cell;
     }
@@ -86,6 +86,7 @@
         }
         cell.labelCategoryName.font = [UIFont fontWithName:@"Halvetica" size:16.0f];
         cell.labelCategoryName.text = [_arrayFavourite objectAtIndex:indexPath.row];
+        cell.labelCategoryName.textColor = AppBlueColor;
         return cell;
     }
 }

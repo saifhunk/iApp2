@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 #define AppGreenColor [UIColor colorWithRed:80.0/255.0 green:158.0/255.0 blue:160.0/255.0 alpha:1.0]
+#define AppBlueColor [UIColor colorWithRed:30/255.0f green:71/255.0f blue:173/255.0f alpha:1]

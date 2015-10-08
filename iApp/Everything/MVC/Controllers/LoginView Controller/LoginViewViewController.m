@@ -26,8 +26,8 @@
 {
     [super viewWillAppear:animated];
     
-    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:50.0f/255.0f green:143.0f/255.0f blue:153.0f/255.0f alpha:1]}];
-     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:50.0f/255.0f green:143.0f/255.0f blue:153.0f/255.0f alpha:1]}];
+    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 
     
 }
@@ -56,6 +56,8 @@
 - (IBAction)actionBtnFacebook:(id)sender {
     
     [[[UIAlertView alloc]initWithTitle:@"" message:@"Coming soon" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil]show];
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent];
+
 }
 
 - (IBAction)actionBtnLogin:(id)sender {

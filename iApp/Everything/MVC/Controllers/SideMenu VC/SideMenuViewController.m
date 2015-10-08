@@ -78,6 +78,17 @@
     [self.sideMenuViewController hideMenuViewController];
 }
 
+- (IBAction)actionBtnFriendList:(id)sender {
+    
+    [self setViewController:SegueFreindsListVc];
+
+}
+
+- (IBAction)actionBtnFollowList:(id)sender {
+    [self setViewController:SegueFollowVc];
+
+}
+
 - (IBAction)actionBtnFeed:(id)sender {
     
     [self setViewController:SegueFeed];

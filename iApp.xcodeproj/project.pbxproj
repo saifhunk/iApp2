@@ -12,6 +12,10 @@
 		D43ADBDA1B9C9FD4007F14A7 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43ADBD91B9C9FD4007F14A7 /* EditProfileViewController.m */; };
 		D43EEE811BAEE90200CCA9CF /* RemoveCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43EEE801BAEE90200CCA9CF /* RemoveCategoryViewController.m */; };
 		D445ADBD1B91E72D00208891 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D445ADBC1B91E72D00208891 /* NotificationViewController.m */; };
+		D4485A9B1BC6F46C00A8F797 /* FollowListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A9A1BC6F46C00A8F797 /* FollowListViewController.m */; };
+		D4485A9E1BC6F48D00A8F797 /* FollowListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A9D1BC6F48D00A8F797 /* FollowListTableViewCell.m */; };
+		D4485AA21BC6F4C200A8F797 /* FriendListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485AA11BC6F4C200A8F797 /* FriendListTableViewCell.m */; };
+		D4485AA51BC6F4DD00A8F797 /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485AA41BC6F4DD00A8F797 /* FriendListViewController.m */; };
 		D46A8E3A1B9B43E000F4CB42 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D46A8E351B9B43DF00F4CB42 /* 1.jpg */; };
 		D46A8E3B1B9B43E000F4CB42 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D46A8E361B9B43E000F4CB42 /* 2.jpg */; };
 		D46A8E3C1B9B43E000F4CB42 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D46A8E371B9B43E000F4CB42 /* 3.jpg */; };
@@ -72,6 +76,14 @@
 		D43EEE801BAEE90200CCA9CF /* RemoveCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveCategoryViewController.m; sourceTree = "<group>"; };
 		D445ADBB1B91E72D00208891 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		D445ADBC1B91E72D00208891 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		D4485A991BC6F46C00A8F797 /* FollowListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowListViewController.h; sourceTree = "<group>"; };
+		D4485A9A1BC6F46C00A8F797 /* FollowListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowListViewController.m; sourceTree = "<group>"; };
+		D4485A9C1BC6F48D00A8F797 /* FollowListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowListTableViewCell.h; sourceTree = "<group>"; };
+		D4485A9D1BC6F48D00A8F797 /* FollowListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowListTableViewCell.m; sourceTree = "<group>"; };
+		D4485AA01BC6F4C200A8F797 /* FriendListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewCell.h; sourceTree = "<group>"; };
+		D4485AA11BC6F4C200A8F797 /* FriendListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewCell.m; sourceTree = "<group>"; };
+		D4485AA31BC6F4DD00A8F797 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
+		D4485AA41BC6F4DD00A8F797 /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
 		D46A8E351B9B43DF00F4CB42 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		D46A8E361B9B43E000F4CB42 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		D46A8E371B9B43E000F4CB42 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -197,6 +209,28 @@
 				D445ADBC1B91E72D00208891 /* NotificationViewController.m */,
 			);
 			path = "Notification VC";
+			sourceTree = "<group>";
+		};
+		D4485A981BC6F45D00A8F797 /* FollowList VC */ = {
+			isa = PBXGroup;
+			children = (
+				D4485A991BC6F46C00A8F797 /* FollowListViewController.h */,
+				D4485A9A1BC6F46C00A8F797 /* FollowListViewController.m */,
+				D4485A9C1BC6F48D00A8F797 /* FollowListTableViewCell.h */,
+				D4485A9D1BC6F48D00A8F797 /* FollowListTableViewCell.m */,
+			);
+			path = "FollowList VC";
+			sourceTree = "<group>";
+		};
+		D4485A9F1BC6F4B300A8F797 /* FriendList VC */ = {
+			isa = PBXGroup;
+			children = (
+				D4485AA31BC6F4DD00A8F797 /* FriendListViewController.h */,
+				D4485AA41BC6F4DD00A8F797 /* FriendListViewController.m */,
+				D4485AA01BC6F4C200A8F797 /* FriendListTableViewCell.h */,
+				D4485AA11BC6F4C200A8F797 /* FriendListTableViewCell.m */,
+			);
+			path = "FriendList VC";
 			sourceTree = "<group>";
 		};
 		D46A8E341B9B43BF00F4CB42 /* Dummy images */ = {
@@ -450,6 +484,8 @@
 		D4B969921B8CCF41000575E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4485A9F1BC6F4B300A8F797 /* FriendList VC */,
+				D4485A981BC6F45D00A8F797 /* FollowList VC */,
 				D4726E3A1BB9A262000C1FA1 /* DeleteAccount */,
 				D4726E361BB9A243000C1FA1 /* WebsiteOwner */,
 				D4726E321BB99CEA000C1FA1 /* Webview */,
@@ -764,7 +800,9 @@
 				D48D16411B8F663C00BDE92B /* MainFeedCollectionViewCellTop.m in Sources */,
 				D4CBB4E21BAEA22500D0B485 /* UIViewController+RESideMenu.m in Sources */,
 				D43ADBDA1B9C9FD4007F14A7 /* EditProfileViewController.m in Sources */,
+				D4485A9B1BC6F46C00A8F797 /* FollowListViewController.m in Sources */,
 				D4F7E3361B933969006A2547 /* CommentTableViewCell.m in Sources */,
+				D4485AA21BC6F4C200A8F797 /* FriendListTableViewCell.m in Sources */,
 				D43EEE811BAEE90200CCA9CF /* RemoveCategoryViewController.m in Sources */,
 				D4CBB4EA1BAEAB9100D0B485 /* SideMenuViewController.m in Sources */,
 				D4B969A31B8CD0A7000575E5 /* LoginViewViewController.m in Sources */,
@@ -776,9 +814,11 @@
 				D4CBB4E01BAEA22500D0B485 /* RECommonFunctions.m in Sources */,
 				D4CBB4E11BAEA22500D0B485 /* RESideMenu.m in Sources */,
 				D4CBB4E61BAEAAC900D0B485 /* RootSidePanelViewController.m in Sources */,
+				D4485A9E1BC6F48D00A8F797 /* FollowListTableViewCell.m in Sources */,
 				D4B969971B8CCF41000575E5 /* AppDelegate.m in Sources */,
 				D48731591BA1F16800B4160B /* MyFeedViewController.m in Sources */,
 				D4F7E3321B9332D9006A2547 /* CommentViewController.m in Sources */,
+				D4485AA51BC6F4DD00A8F797 /* FriendListViewController.m in Sources */,
 				D4B969681B8CCB43000575E5 /* main.m in Sources */,
 				D4726E391BB9A24F000C1FA1 /* WebsiteOwnerViewController.m in Sources */,
 				D47D081B1B99F5D8009AC81A /* SettingVcViewController.m in Sources */,

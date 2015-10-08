@@ -824,7 +824,7 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    UIStatusBarStyle statusBarStyle = UIStatusBarStyleDefault;
+    UIStatusBarStyle statusBarStyle = UIStatusBarStyleLightContent;
     IF_IOS7_OR_GREATER(
        statusBarStyle = self.visible ? self.menuPreferredStatusBarStyle : self.contentViewController.preferredStatusBarStyle;
        if (self.contentViewContainer.frame.origin.y > 10) {

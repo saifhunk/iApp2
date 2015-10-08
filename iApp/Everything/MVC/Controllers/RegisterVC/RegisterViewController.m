@@ -71,7 +71,7 @@
     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     _tfReEnterPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Re-enter Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [_btnMale setTitle:@"Male" forState:UIControlStateNormal];
-    [_btnFemale setTitle:@"female" forState:UIControlStateNormal];
+    [_btnFemale setTitle:@"Female" forState:UIControlStateNormal];
     [_btnCancel setTitle:@"Cancel" forState:UIControlStateNormal];
     [_btnNext setTitle:@"Next" forState:UIControlStateNormal];
     [_btnCurrentCity setTitle:@"Current Location" forState:UIControlStateNormal];
@@ -127,11 +127,11 @@
     
     [self.view endEditing:YES];
     
-    if(0 == [_tfName.text length]) {
-        
-        [self alertView:@"Please enter a valid Username"];
-        return;
-    }
+//    if(0 == [_tfName.text length]) {
+//        
+//        [self alertView:@"Please enter a valid Username"];
+//        return;
+//    }
     
 }
 
