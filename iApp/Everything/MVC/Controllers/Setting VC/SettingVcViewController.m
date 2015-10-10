@@ -45,7 +45,7 @@
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.tintColor = AppBlueColor;
+    self.navigationController.navigationBar.tintColor = AppGrayColor;
 }
 
 - (IBAction)actionbtnSidePanel:(id)sender {

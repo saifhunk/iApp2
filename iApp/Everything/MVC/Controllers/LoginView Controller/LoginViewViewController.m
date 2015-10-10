@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewViewController.h"
+#import "Header.h"
 
 @interface LoginViewViewController ()
 
@@ -26,8 +27,8 @@
 {
     [super viewWillAppear:animated];
     
-    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
 
     
 }

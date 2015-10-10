@@ -84,6 +84,7 @@
 		D4485AA11BC6F4C200A8F797 /* FriendListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewCell.m; sourceTree = "<group>"; };
 		D4485AA31BC6F4DD00A8F797 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		D4485AA41BC6F4DD00A8F797 /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
+		D45D272A1BC8CC98000E4595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizeHelper.strings; sourceTree = "<group>"; };
 		D46A8E351B9B43DF00F4CB42 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		D46A8E361B9B43E000F4CB42 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		D46A8E371B9B43E000F4CB42 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -850,6 +851,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D4B9699E1B8CCFFA000575E5 /* Base */,
+				D45D272A1BC8CC98000E4595 /* en */,
 			);
 			name = LocalizeHelper.strings;
 			sourceTree = "<group>";

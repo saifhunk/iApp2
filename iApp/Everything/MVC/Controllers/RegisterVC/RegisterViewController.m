@@ -63,13 +63,13 @@
 
 -(void)initializingTitles {
     
-    _tfName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Name" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    _tfCity.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"City" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    _tfState.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"State/Provinces" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    _tfCountry.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Country" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    _tfReEnterPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Re-enter Password" attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    _tfName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Name" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfCity.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"City" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfState.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"State/Provinces" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfCountry.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Country" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfReEnterPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Re-enter Password" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
     [_btnMale setTitle:@"Male" forState:UIControlStateNormal];
     [_btnFemale setTitle:@"Female" forState:UIControlStateNormal];
     [_btnCancel setTitle:@"Cancel" forState:UIControlStateNormal];
