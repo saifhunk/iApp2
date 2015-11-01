@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _imageViewProfile.layer.cornerRadius =  _imageViewProfile.frame.size.height/2;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

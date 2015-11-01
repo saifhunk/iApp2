@@ -119,7 +119,7 @@
         
         
         
-        return CGSizeMake(self.collectionViewTop.frame.size.width,self.collectionViewTop.frame.size.height);
+        return CGSizeMake(self.collectionViewTop.frame.size.width/1.4,self.collectionViewTop.frame.size.height);
     }
     else
     {

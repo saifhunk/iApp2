@@ -10,4 +10,6 @@
 
 @interface WebviewViewController : UIViewController
 
+-(void)GetUrl:(NSString *)url;
+
 @end

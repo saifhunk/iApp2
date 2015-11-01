@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Header.h"
+#import "Constants.h"
+#import "CategoryModal.h"
+#import "WebviewViewController.h"
 
 @protocol  DelegateRemoveCategory
 
@@ -20,9 +22,10 @@
 @property(nonatomic,retain)id<DelegateRemoveCategory>Deleagte;
 @property NSString * strHeader;
 @property NSIndexPath * indexpath;
+@property(nonatomic,strong)NSArray * arraylinks;
 @property (weak, nonatomic) IBOutlet UILabel *labelHeading;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewWebsites;
 
--(void)getData:(NSString *)strCategory :(NSIndexPath *)indexpath;
+-(void)getData:(CategoryModal *)Category :(NSIndexPath *)indexpath;
 
 @end

@@ -7,6 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "RMMapper.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "NSUserDefaults+RMSaveCustomObject.h"
+#import "BLLoader.h"
+#import "JTMaterialSpinner.h"
+#import "iOSRequest.h"
 #import "identifers.h"
 #import "Segue.h"
 #import "Constants.h"
@@ -14,7 +21,7 @@
 #import "MainFeedCollectionViewCellTop.h"
 #import "MainFeedCollectionViewCellBottom.h"
 #import "LoginViewViewController.h"
-#import "CategoryCollectionViewCell.h"
+#import "CategoryViewConroller.h"
 #import "RemoveCategoryViewController.h"
 
 
@@ -23,6 +30,11 @@
 
 #import "CommentTableViewCell.h"
 #import "CategoryCollectionViewCell.h"
+
+//models
+
+#import "CategoryModal.h"
+#import "FeedModal.h"
 
 
 

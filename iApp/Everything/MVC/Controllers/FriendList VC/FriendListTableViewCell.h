@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FriendListTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewProfile;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 @end

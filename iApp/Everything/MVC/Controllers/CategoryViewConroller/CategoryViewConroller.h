@@ -7,18 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Header.h"
+#import "RemoveCategoryViewController.h"
+#import "BLLoader.h"
+#import "CategoryModal.h"
 
 @interface CategoryViewConroller : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,DelegateRemoveCategory>
 
 #pragma mark - Custom Property
 
+@property BOOL IsFromLogin;
 @property(nonatomic,strong)NSMutableArray * arrayFavourite;
 @property(nonatomic,strong)NSMutableArray * arrayCategories;
+@property (weak, nonatomic) IBOutlet BLLoader *Loader;
 
 
 #pragma mark - IBOutlet
 
+@property (weak, nonatomic) IBOutlet UIButton *btnSidepanel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewFavorite;
 @property (weak, nonatomic) IBOutlet UICollectionView *CollectionViewCategory;
 @property (weak, nonatomic) IBOutlet UIButton *btnFeeed;
@@ -26,5 +31,6 @@
 #pragma mark - IBAction
 
 - (IBAction)ActionBtnFeed:(id)sender;
+- (IBAction)actionBtnSidepanel:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 #import "Header.h"
 #import "MainFeedCollectionViewCellTop.h"
 #import "PostViewController.h"
+#import "BLLoader.h"
 
 
 @interface MainFeedViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,JournlistClicked>
@@ -28,6 +29,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnProfile;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewTop;
+@property (weak, nonatomic) IBOutlet BLLoader *Loader;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewBottom;
 

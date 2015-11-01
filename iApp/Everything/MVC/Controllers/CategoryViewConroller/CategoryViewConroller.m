@@ -8,7 +8,7 @@
 
 #import "CategoryViewConroller.h"
 #import "RootSidePanelViewController.h"
-#define Width6 375
+#import "Header.h"
 
 @interface CategoryViewConroller ()
 
@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUi];
+    [self CallingApi];
     
 }
 
@@ -36,15 +37,60 @@
 
 -(void)setupUi
 {
- 
+    
+    if (_IsFromLogin == YES) {
+        _btnSidepanel.hidden = YES;
+    }
     [_btnFeeed setEnabled:NO];
     [_btnFeeed setAlpha:0.5];
-
-    _arrayFavourite = [[NSMutableArray alloc]init];
-    _arrayCategories = [[NSMutableArray alloc]initWithObjects:@"Tech",@"Science",@"Food",@"Movies",@"Comedy",@"Music",@"Politics", nil];
     
+    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"KuserCategory"];
+    _arrayFavourite = [[NSMutableArray alloc]init];
+//    _arrayCategories = [[NSMutableArray alloc]initWithObjects:@"Tech",@"Science",@"Food",@"Movies",@"Comedy",@"Music",@"Politics", nil];
+//    
     [_CollectionViewCategory registerNib:[UINib nibWithNibName:@"CategoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCategory"];
     [_collectionViewFavorite registerNib:[UINib nibWithNibName:@"CategoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCategory"];
+}
+
+
+
+-(void)CallingApi
+{
+    
+    _Loader.lineWidth = 50.0;
+    _Loader.color = [UIColor grayColor];
+    [_Loader startAnimation];
+    
+    [iOSRequest getJSONRespone:[NSString stringWithFormat:kGetCategory,KBaseUrl] :^(NSDictionary *response_success) {
+        
+        [_Loader stopAnimation];
+        [_Loader removeFromSuperview];
+        
+        if ([[response_success valueForKey:@"Status"] integerValue]==1) {
+            
+        _arrayCategories = [[NSMutableArray alloc]init];
+        _arrayFavourite = [[NSMutableArray alloc]init];
+
+        _arrayCategories = [CategoryModal ParseArrayToDict:[response_success valueForKey:@"data"]];
+            [_CollectionViewCategory reloadData];
+        }
+        else
+        {
+            [self alertShow:@"Error" :[response_success valueForKey:@"Message"]];
+
+        }
+        
+        
+    } :^(NSError *response_error) {
+        [_Loader stopAnimation];
+        [_Loader removeFromSuperview];
+        [self alertShow:@"Error" :response_error.localizedDescription];
+    }];
+}
+
+-(void)alertShow:(NSString *)title : (NSString *)msg
+{
+    [[[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:@"nil", nil]show];
 }
 
 #pragma mark - collectionView Delegate
@@ -57,14 +103,14 @@
         return _arrayFavourite.count;
     }
     else{
-    return 7;
+        return _arrayCategories.count;
     }
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    if (_CollectionViewCategory == collectionView) {
+    if (_collectionViewFavorite == collectionView) {
         
     CategoryCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCategory" forIndexPath:indexPath];
     if (cell == nil) {
@@ -72,7 +118,9 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryCollectionViewCell" owner:self options:nil]objectAtIndex:0];
     }
     
-        cell.labelCategoryName.text = [_arrayCategories objectAtIndex:indexPath.row];
+        CategoryModal * obj = [_arrayFavourite objectAtIndex:indexPath.row];
+        
+        cell.labelCategoryName.text = obj.CategoryModal_CategoryName;
         cell.labelCategoryName.textColor = AppGrayColor;
     
     return cell;
@@ -84,8 +132,9 @@
             
             cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryCollectionViewCell" owner:self options:nil]objectAtIndex:0];
         }
-        cell.labelCategoryName.font = [UIFont fontWithName:@"Halvetica" size:16.0f];
-        cell.labelCategoryName.text = [_arrayFavourite objectAtIndex:indexPath.row];
+        CategoryModal * obj = [_arrayCategories objectAtIndex:indexPath.row];
+
+        cell.labelCategoryName.text = obj.CategoryModal_CategoryName;
         cell.labelCategoryName.textColor = AppGrayColor;
         return cell;
     }
@@ -96,16 +145,36 @@
     if (_CollectionViewCategory == collectionView) {
         [_btnFeeed setAlpha:1];
         [_btnFeeed setEnabled:YES];
-        if (![_arrayFavourite containsObject:[_arrayCategories objectAtIndex:indexPath.row]]) {
+       
+        if (_arrayFavourite.count == 0) {
+            
             [_arrayFavourite addObject:[_arrayCategories objectAtIndex:indexPath.row]];
-            [_collectionViewFavorite reloadData];
+
         }
+        else
+        {
+            BOOL Istrue = false;
+            
+            
+            CategoryModal * modal2 = [_arrayCategories objectAtIndex:indexPath.row];
+            for (CategoryModal * modal in _arrayFavourite) {
+            
+            if (modal.CategoryModal_CategoryID.integerValue == modal2.CategoryModal_CategoryID.integerValue) {
+                Istrue = true;
+            }
+            }
+            if (Istrue  == false) {
+                [_arrayFavourite addObject:modal2];
+
+            }
+            
+        }
+            [_collectionViewFavorite reloadData];
+        
     }
     else
     {
         [self performSegueWithIdentifier:@"RemoveCategory" sender:indexPath];
-//        [_arrayFavourite removeObjectAtIndex:indexPath.row];
-//        [_collectionViewFavorite reloadData];
     }
 }
 
@@ -135,16 +204,10 @@
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    CGRect screen = [[UIScreen mainScreen]bounds];
-    if (Width6 != screen.size.width) {
+    
         return UIEdgeInsetsMake(0, 10, 0, 0);
 
-    }
-    else
-    {
-        return UIEdgeInsetsMake(0, 10, 0, 0);
-    }
-    }
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -164,8 +227,25 @@
 
 - (IBAction)ActionBtnFeed:(id)sender {
     
+    if (_arrayFavourite.count == 0) {
+        
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        [defaults rm_setCustomObject:_arrayCategories forKey:@"KuserCategory"];
+    }
+    else
+    {
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        [defaults rm_setCustomObject:_arrayFavourite forKey:@"KuserCategory"];
+    }
     RootSidePanelViewController * VC = [self.storyboard instantiateViewControllerWithIdentifier:@"RootSidePanelViewController"];
     [self.navigationController pushViewController:VC animated:YES];
+  
+
+}
+
+- (IBAction)actionBtnSidepanel:(id)sender {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"iApp_sidePanelOpen" object:nil];
 
 }
 @end

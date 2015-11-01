@@ -11,6 +11,12 @@
 		D43ADBD61B9C9F6A007F14A7 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43ADBD51B9C9F6A007F14A7 /* 12.jpg */; };
 		D43ADBDA1B9C9FD4007F14A7 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43ADBD91B9C9FD4007F14A7 /* EditProfileViewController.m */; };
 		D43EEE811BAEE90200CCA9CF /* RemoveCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43EEE801BAEE90200CCA9CF /* RemoveCategoryViewController.m */; };
+		D44058381BE5CC2400D93454 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = D44058311BE5CC2400D93454 /* NSObject+RMArchivable.m */; };
+		D44058391BE5CC2400D93454 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = D44058331BE5CC2400D93454 /* NSObject+RMCopyable.m */; };
+		D440583A1BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D44058351BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.m */; };
+		D440583B1BE5CC2400D93454 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D44058371BE5CC2400D93454 /* RMMapper.m */; };
+		D440583D1BE5D20B00D93454 /* CategoryViewConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D440583C1BE5D20B00D93454 /* CategoryViewConroller.m */; };
+		D44058411BE5D28E00D93454 /* FeedModal.m in Sources */ = {isa = PBXBuildFile; fileRef = D44058401BE5D28E00D93454 /* FeedModal.m */; };
 		D445ADBD1B91E72D00208891 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D445ADBC1B91E72D00208891 /* NotificationViewController.m */; };
 		D4485A9B1BC6F46C00A8F797 /* FollowListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A9A1BC6F46C00A8F797 /* FollowListViewController.m */; };
 		D4485A9E1BC6F48D00A8F797 /* FollowListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4485A9D1BC6F48D00A8F797 /* FollowListTableViewCell.m */; };
@@ -33,6 +39,10 @@
 		D48D16411B8F663C00BDE92B /* MainFeedCollectionViewCellTop.m in Sources */ = {isa = PBXBuildFile; fileRef = D48D16401B8F663C00BDE92B /* MainFeedCollectionViewCellTop.m */; };
 		D48D16441B8F665600BDE92B /* MainFeedCollectionViewCellBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = D48D16431B8F665600BDE92B /* MainFeedCollectionViewCellBottom.m */; };
 		D497D1AB1B98AECC00A844F2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D497D1AA1B98AECC00A844F2 /* RegisterViewController.m */; };
+		D4A114551BE5248F0002A0D7 /* BLLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A114541BE5248F0002A0D7 /* BLLoader.m */; };
+		D4A1145A1BE524E60002A0D7 /* iOSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A114591BE524E60002A0D7 /* iOSRequest.m */; };
+		D4A1145D1BE529D80002A0D7 /* JTMaterialSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A1145C1BE529D80002A0D7 /* JTMaterialSpinner.m */; };
+		D4A114611BE52B7A0002A0D7 /* CategoryModal.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A114601BE52B7A0002A0D7 /* CategoryModal.m */; };
 		D4B969681B8CCB43000575E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B969671B8CCB43000575E5 /* main.m */; };
 		D4B969731B8CCB44000575E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B969721B8CCB44000575E5 /* Images.xcassets */; };
 		D4B969821B8CCB44000575E5 /* iAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4B969811B8CCB44000575E5 /* iAppTests.m */; };
@@ -47,7 +57,6 @@
 		D4CBB4E61BAEAAC900D0B485 /* RootSidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CBB4E51BAEAAC900D0B485 /* RootSidePanelViewController.m */; };
 		D4CBB4EA1BAEAB9100D0B485 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CBB4E91BAEAB9100D0B485 /* SideMenuViewController.m */; };
 		D4CFF1E71B8E175000B74CFA /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFF1E61B8E175000B74CFA /* MainFeedViewController.m */; };
-		D4E3525B1B9C431D00D49D09 /* CategoryViewConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E3525A1B9C431D00D49D09 /* CategoryViewConroller.m */; };
 		D4E352601B9C437A00D49D09 /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E3525E1B9C437A00D49D09 /* CategoryCollectionViewCell.m */; };
 		D4E352611B9C437A00D49D09 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E3525F1B9C437A00D49D09 /* CategoryCollectionViewCell.xib */; };
 		D4F7E32E1B93305A006A2547 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F7E32D1B93305A006A2547 /* PostViewController.m */; };
@@ -74,6 +83,17 @@
 		D43ADBD91B9C9FD4007F14A7 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		D43EEE7F1BAEE90200CCA9CF /* RemoveCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveCategoryViewController.h; sourceTree = "<group>"; };
 		D43EEE801BAEE90200CCA9CF /* RemoveCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveCategoryViewController.m; sourceTree = "<group>"; };
+		D44058301BE5CC2400D93454 /* NSObject+RMArchivable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMArchivable.h"; sourceTree = "<group>"; };
+		D44058311BE5CC2400D93454 /* NSObject+RMArchivable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMArchivable.m"; sourceTree = "<group>"; };
+		D44058321BE5CC2400D93454 /* NSObject+RMCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMCopyable.h"; sourceTree = "<group>"; };
+		D44058331BE5CC2400D93454 /* NSObject+RMCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMCopyable.m"; sourceTree = "<group>"; };
+		D44058341BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+RMSaveCustomObject.h"; sourceTree = "<group>"; };
+		D44058351BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+RMSaveCustomObject.m"; sourceTree = "<group>"; };
+		D44058361BE5CC2400D93454 /* RMMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapper.h; sourceTree = "<group>"; };
+		D44058371BE5CC2400D93454 /* RMMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapper.m; sourceTree = "<group>"; };
+		D440583C1BE5D20B00D93454 /* CategoryViewConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewConroller.m; sourceTree = "<group>"; };
+		D440583F1BE5D28E00D93454 /* FeedModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedModal.h; sourceTree = "<group>"; };
+		D44058401BE5D28E00D93454 /* FeedModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedModal.m; sourceTree = "<group>"; };
 		D445ADBB1B91E72D00208891 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		D445ADBC1B91E72D00208891 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		D4485A991BC6F46C00A8F797 /* FollowListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowListViewController.h; sourceTree = "<group>"; };
@@ -118,6 +138,14 @@
 		D48D16451B8F6AAA00BDE92B /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = iApp/Everything/Header.h; sourceTree = SOURCE_ROOT; };
 		D497D1A91B98AECC00A844F2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D497D1AA1B98AECC00A844F2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		D4A114531BE5248F0002A0D7 /* BLLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLLoader.h; path = "iApp/Everything/3rd Party/BLLoader.h"; sourceTree = SOURCE_ROOT; };
+		D4A114541BE5248F0002A0D7 /* BLLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLLoader.m; path = "iApp/Everything/3rd Party/BLLoader.m"; sourceTree = SOURCE_ROOT; };
+		D4A114581BE524E60002A0D7 /* iOSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSRequest.h; sourceTree = "<group>"; };
+		D4A114591BE524E60002A0D7 /* iOSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSRequest.m; sourceTree = "<group>"; };
+		D4A1145B1BE529D80002A0D7 /* JTMaterialSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTMaterialSpinner.h; sourceTree = "<group>"; };
+		D4A1145C1BE529D80002A0D7 /* JTMaterialSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTMaterialSpinner.m; sourceTree = "<group>"; };
+		D4A1145F1BE52B7A0002A0D7 /* CategoryModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModal.h; sourceTree = "<group>"; };
+		D4A114601BE52B7A0002A0D7 /* CategoryModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModal.m; sourceTree = "<group>"; };
 		D4B969621B8CCB43000575E5 /* iApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B969661B8CCB43000575E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4B969671B8CCB43000575E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -145,7 +173,6 @@
 		D4CFF1E51B8E174F00B74CFA /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
 		D4CFF1E61B8E175000B74CFA /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
 		D4E352591B9C431D00D49D09 /* CategoryViewConroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewConroller.h; sourceTree = "<group>"; };
-		D4E3525A1B9C431D00D49D09 /* CategoryViewConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewConroller.m; sourceTree = "<group>"; };
 		D4E3525D1B9C437A00D49D09 /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
 		D4E3525E1B9C437A00D49D09 /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
 		D4E3525F1B9C437A00D49D09 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -201,6 +228,30 @@
 				D43EEE801BAEE90200CCA9CF /* RemoveCategoryViewController.m */,
 			);
 			path = RemoveCategory;
+			sourceTree = "<group>";
+		};
+		D440582F1BE5CC1000D93454 /* RMMapper */ = {
+			isa = PBXGroup;
+			children = (
+				D44058301BE5CC2400D93454 /* NSObject+RMArchivable.h */,
+				D44058311BE5CC2400D93454 /* NSObject+RMArchivable.m */,
+				D44058321BE5CC2400D93454 /* NSObject+RMCopyable.h */,
+				D44058331BE5CC2400D93454 /* NSObject+RMCopyable.m */,
+				D44058341BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.h */,
+				D44058351BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.m */,
+				D44058361BE5CC2400D93454 /* RMMapper.h */,
+				D44058371BE5CC2400D93454 /* RMMapper.m */,
+			);
+			path = RMMapper;
+			sourceTree = "<group>";
+		};
+		D440583E1BE5D27E00D93454 /* FeedModal */ = {
+			isa = PBXGroup;
+			children = (
+				D440583F1BE5D28E00D93454 /* FeedModal.h */,
+				D44058401BE5D28E00D93454 /* FeedModal.m */,
+			);
+			path = FeedModal;
 			sourceTree = "<group>";
 		};
 		D445ADBA1B91E70D00208891 /* Notification VC */ = {
@@ -394,6 +445,35 @@
 			path = RegisterVC;
 			sourceTree = "<group>";
 		};
+		D4A114561BE524A80002A0D7 /* BLLoader */ = {
+			isa = PBXGroup;
+			children = (
+				D4A1145B1BE529D80002A0D7 /* JTMaterialSpinner.h */,
+				D4A1145C1BE529D80002A0D7 /* JTMaterialSpinner.m */,
+				D4A114531BE5248F0002A0D7 /* BLLoader.h */,
+				D4A114541BE5248F0002A0D7 /* BLLoader.m */,
+			);
+			path = BLLoader;
+			sourceTree = "<group>";
+		};
+		D4A114571BE524E60002A0D7 /* IOSRequest */ = {
+			isa = PBXGroup;
+			children = (
+				D4A114581BE524E60002A0D7 /* iOSRequest.h */,
+				D4A114591BE524E60002A0D7 /* iOSRequest.m */,
+			);
+			path = IOSRequest;
+			sourceTree = "<group>";
+		};
+		D4A1145E1BE52B490002A0D7 /* CategoryModal */ = {
+			isa = PBXGroup;
+			children = (
+				D4A1145F1BE52B7A0002A0D7 /* CategoryModal.h */,
+				D4A114601BE52B7A0002A0D7 /* CategoryModal.m */,
+			);
+			path = CategoryModal;
+			sourceTree = "<group>";
+		};
 		D4B969591B8CCB43000575E5 = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +533,7 @@
 		D4B9698D1B8CCF41000575E5 /* Everything */ = {
 			isa = PBXGroup;
 			children = (
+				D4A114571BE524E60002A0D7 /* IOSRequest */,
 				D4CBB4CE1BAEA05200D0B485 /* 3rd Party */,
 				D46A8E341B9B43BF00F4CB42 /* Dummy images */,
 				D48D16481B8F6ABB00BDE92B /* Header Files */,
@@ -513,6 +594,8 @@
 		D4B969931B8CCF41000575E5 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				D440583E1BE5D27E00D93454 /* FeedModal */,
+				D4A1145E1BE52B490002A0D7 /* CategoryModal */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -546,6 +629,8 @@
 		D4CBB4CE1BAEA05200D0B485 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
+				D440582F1BE5CC1000D93454 /* RMMapper */,
+				D4A114561BE524A80002A0D7 /* BLLoader */,
 				D4CBB4D91BAEA22500D0B485 /* RESideMenu */,
 			);
 			path = "3rd Party";
@@ -596,7 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E352591B9C431D00D49D09 /* CategoryViewConroller.h */,
-				D4E3525A1B9C431D00D49D09 /* CategoryViewConroller.m */,
+				D440583C1BE5D20B00D93454 /* CategoryViewConroller.m */,
 				D4E3525C1B9C434500D49D09 /* CategoryCell CV */,
 			);
 			path = CategoryViewConroller;
@@ -794,25 +879,33 @@
 			files = (
 				D4E352601B9C437A00D49D09 /* CategoryCollectionViewCell.m in Sources */,
 				D497D1AB1B98AECC00A844F2 /* RegisterViewController.m in Sources */,
+				D4A114551BE5248F0002A0D7 /* BLLoader.m in Sources */,
+				D440583D1BE5D20B00D93454 /* CategoryViewConroller.m in Sources */,
+				D4A114611BE52B7A0002A0D7 /* CategoryModal.m in Sources */,
 				D445ADBD1B91E72D00208891 /* NotificationViewController.m in Sources */,
 				D47D080F1B99F06B009AC81A /* AddImageViewController.m in Sources */,
 				D48D16441B8F665600BDE92B /* MainFeedCollectionViewCellBottom.m in Sources */,
+				D44058391BE5CC2400D93454 /* NSObject+RMCopyable.m in Sources */,
 				D47D08131B99F577009AC81A /* NewPostViewController.m in Sources */,
 				D48D16411B8F663C00BDE92B /* MainFeedCollectionViewCellTop.m in Sources */,
 				D4CBB4E21BAEA22500D0B485 /* UIViewController+RESideMenu.m in Sources */,
 				D43ADBDA1B9C9FD4007F14A7 /* EditProfileViewController.m in Sources */,
 				D4485A9B1BC6F46C00A8F797 /* FollowListViewController.m in Sources */,
 				D4F7E3361B933969006A2547 /* CommentTableViewCell.m in Sources */,
+				D44058411BE5D28E00D93454 /* FeedModal.m in Sources */,
 				D4485AA21BC6F4C200A8F797 /* FriendListTableViewCell.m in Sources */,
 				D43EEE811BAEE90200CCA9CF /* RemoveCategoryViewController.m in Sources */,
+				D4A1145D1BE529D80002A0D7 /* JTMaterialSpinner.m in Sources */,
 				D4CBB4EA1BAEAB9100D0B485 /* SideMenuViewController.m in Sources */,
+				D4A1145A1BE524E60002A0D7 /* iOSRequest.m in Sources */,
 				D4B969A31B8CD0A7000575E5 /* LoginViewViewController.m in Sources */,
 				D47D08171B99F5AD009AC81A /* EyeWitnessViewController.m in Sources */,
 				D4726E351BB99CF7000C1FA1 /* WebviewViewController.m in Sources */,
 				D4726E3D1BB9A276000C1FA1 /* DeleteAccountViewController.m in Sources */,
 				D4F7E32E1B93305A006A2547 /* PostViewController.m in Sources */,
-				D4E3525B1B9C431D00D49D09 /* CategoryViewConroller.m in Sources */,
+				D440583A1BE5CC2400D93454 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				D4CBB4E01BAEA22500D0B485 /* RECommonFunctions.m in Sources */,
+				D44058381BE5CC2400D93454 /* NSObject+RMArchivable.m in Sources */,
 				D4CBB4E11BAEA22500D0B485 /* RESideMenu.m in Sources */,
 				D4CBB4E61BAEAAC900D0B485 /* RootSidePanelViewController.m in Sources */,
 				D4485A9E1BC6F48D00A8F797 /* FollowListTableViewCell.m in Sources */,
@@ -821,6 +914,7 @@
 				D4F7E3321B9332D9006A2547 /* CommentViewController.m in Sources */,
 				D4485AA51BC6F4DD00A8F797 /* FriendListViewController.m in Sources */,
 				D4B969681B8CCB43000575E5 /* main.m in Sources */,
+				D440583B1BE5CC2400D93454 /* RMMapper.m in Sources */,
 				D4726E391BB9A24F000C1FA1 /* WebsiteOwnerViewController.m in Sources */,
 				D47D081B1B99F5D8009AC81A /* SettingVcViewController.m in Sources */,
 				D4CFF1E71B8E175000B74CFA /* MainFeedViewController.m in Sources */,

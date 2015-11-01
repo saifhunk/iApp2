@@ -89,6 +89,11 @@
 
 }
 
+- (IBAction)actionBtnEditSubscription:(id)sender {
+    
+    [self setViewController:SegueCategoryVc];
+}
+
 - (IBAction)actionBtnFeed:(id)sender {
     
     [self setViewController:SegueFeed];

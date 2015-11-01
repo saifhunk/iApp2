@@ -20,4 +20,5 @@
 #define SegueSettingVc @"SettingVcViewController"
 #define SegueFreindsListVc @"FriendListViewController"
 #define SegueFollowVc @"FollowListViewController"
+#define SegueCategoryVc @"CategoryViewConroller"
 

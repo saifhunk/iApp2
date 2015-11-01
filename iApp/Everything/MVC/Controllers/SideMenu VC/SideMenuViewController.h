@@ -27,11 +27,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnFeed;
 @property (weak, nonatomic) IBOutlet UIButton *btnFriendList;
 @property (weak, nonatomic) IBOutlet UIButton *btnFollowList;
+@property (weak, nonatomic) IBOutlet UIButton *BtnEditSubscription;
 
 
 #pragma mark - button actions
 - (IBAction)actionBtnFriendList:(id)sender;
 - (IBAction)actionBtnFollowList:(id)sender;
+- (IBAction)actionBtnEditSubscription:(id)sender;
 
 - (IBAction)actionBtnFeed:(id)sender;
 

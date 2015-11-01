@@ -126,6 +126,16 @@ NSData * signUpImageData;
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"CategoryViewConroller"]) {
+        
+        CategoryViewConroller * VC = segue.destinationViewController;
+        VC.IsFromLogin = YES;
+        
+    }
+}
+
 #pragma mark - Alert Box
 
 -(void)alertBox : (NSString *)message {

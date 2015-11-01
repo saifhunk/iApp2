@@ -61,6 +61,16 @@
 
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"CategoryViewConroller"]) {
+        
+        CategoryViewConroller * VC = segue.destinationViewController;
+        VC.IsFromLogin = YES;
+        
+    }
+}
+
 - (IBAction)actionBtnLogin:(id)sender {
 }
 
