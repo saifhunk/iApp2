@@ -12,15 +12,23 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-dR-KXX">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                    <color key="backgroundColor" red="0.98039215690000003" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass Report" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bek-Ki-jLM">
+                    <rect key="frame" x="147" y="219" width="186" height="43"/>
+                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="34"/>
+                    <color key="textColor" red="0.1019607843" green="0.6588235294" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="IjY-dR-KXX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FzV-YN-BmS"/>
+                <constraint firstAttribute="centerY" secondItem="bek-Ki-jLM" secondAttribute="centerY" id="Mi9-a0-m0u"/>
                 <constraint firstItem="IjY-dR-KXX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kuc-6M-qbG"/>
                 <constraint firstAttribute="bottom" secondItem="IjY-dR-KXX" secondAttribute="bottom" id="mze-W3-pba"/>
                 <constraint firstAttribute="trailing" secondItem="IjY-dR-KXX" secondAttribute="trailing" id="onh-jk-h2Z"/>
+                <constraint firstAttribute="centerX" secondItem="bek-Ki-jLM" secondAttribute="centerX" id="pC6-ec-AcU"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

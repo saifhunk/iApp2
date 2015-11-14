@@ -27,8 +27,10 @@
 {
     [super viewWillAppear:animated];
     
-    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
-     _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: AppGrayColor}];
+    _tfEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Username" attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
+    _tfPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]}];
+    _ViewTfLogin.layer.borderColor = [UIColor colorWithRed:217/255.0f green:214/255.0f blue:214/255.0f alpha:1].CGColor;
+    _ViewTfLogin.layer.borderWidth =1.0f;
 
     
 }

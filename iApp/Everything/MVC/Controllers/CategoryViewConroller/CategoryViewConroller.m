@@ -11,6 +11,9 @@
 #import "Header.h"
 
 @interface CategoryViewConroller ()
+{
+    NSMutableArray * arrayIndex;
+}
 
 @end
 
@@ -19,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUi];
-    [self CallingApi];
+   // [self CallingApi];
     
 }
 
@@ -38,17 +41,22 @@
 -(void)setupUi
 {
     
+    _tabelViewWebsites.allowsMultipleSelection = NO;
     if (_IsFromLogin == YES) {
         _btnSidepanel.hidden = YES;
     }
-    [_btnFeeed setEnabled:NO];
-    [_btnFeeed setAlpha:0.5];
+    [_btnFeeed setEnabled:YES];
+    [_btnFeeed setAlpha:1];
     
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"KuserCategory"];
     _arrayFavourite = [[NSMutableArray alloc]init];
-//    _arrayCategories = [[NSMutableArray alloc]initWithObjects:@"Tech",@"Science",@"Food",@"Movies",@"Comedy",@"Music",@"Politics", nil];
-//    
-    [_CollectionViewCategory registerNib:[UINib nibWithNibName:@"CategoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCategory"];
+    arrayIndex = [[NSMutableArray alloc]init];
+    //_arraylinks = [[NSMutableArray alloc]init];
+
+    
+    self.arrayCategories = [[NSMutableArray alloc]initWithObjects:@"Tech",@"Science",@"Food",@"Movies",@"Music",@"Politics", nil];
+    self.arrayFavourite = [[NSMutableArray alloc]initWithObjects:@"51.jpg",@"52.jpg",@"53.jpg",@"54.jpg",@"55.jpg",@"56.jpg", nil];
+//    //
     [_collectionViewFavorite registerNib:[UINib nibWithNibName:@"CategoryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCategory"];
 }
 
@@ -72,7 +80,6 @@
         _arrayFavourite = [[NSMutableArray alloc]init];
 
         _arrayCategories = [CategoryModal ParseArrayToDict:[response_success valueForKey:@"data"]];
-            [_CollectionViewCategory reloadData];
         }
         else
         {
@@ -97,124 +104,171 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    if (_collectionViewFavorite == collectionView)
-    {
+  
         
-        return _arrayFavourite.count;
-    }
-    else{
         return _arrayCategories.count;
-    }
+   
 }
-
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    if (_collectionViewFavorite == collectionView) {
-        
+
+    
     CategoryCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCategory" forIndexPath:indexPath];
     if (cell == nil) {
         
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryCollectionViewCell" owner:self options:nil]objectAtIndex:0];
     }
     
-        CategoryModal * obj = [_arrayFavourite objectAtIndex:indexPath.row];
+        //CategoryModal * obj = [_arrayFavourite objectAtIndex:indexPath.row];
         
-        cell.labelCategoryName.text = obj.CategoryModal_CategoryName;
-        cell.labelCategoryName.textColor = AppGrayColor;
+    cell.labelCategoryName.text = [_arrayCategories objectAtIndex:indexPath.row];
+        //cell.labelCategoryName.textColor = AppGrayColor;
+    cell.imageViewBackgroundImage.image = [UIImage imageNamed:[_arrayFavourite objectAtIndex:indexPath.row]];
     
     return cell;
-    }
-    else
-    {
-        CategoryCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionViewCategory" forIndexPath:indexPath];
-        if (cell == nil) {
-            
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"CategoryCollectionViewCell" owner:self options:nil]objectAtIndex:0];
-        }
-        CategoryModal * obj = [_arrayCategories objectAtIndex:indexPath.row];
-
-        cell.labelCategoryName.text = obj.CategoryModal_CategoryName;
-        cell.labelCategoryName.textColor = AppGrayColor;
-        return cell;
-    }
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (_CollectionViewCategory == collectionView) {
-        [_btnFeeed setAlpha:1];
-        [_btnFeeed setEnabled:YES];
-       
-        if (_arrayFavourite.count == 0) {
-            
-            [_arrayFavourite addObject:[_arrayCategories objectAtIndex:indexPath.row]];
-
-        }
-        else
-        {
-            BOOL Istrue = false;
-            
-            
-            CategoryModal * modal2 = [_arrayCategories objectAtIndex:indexPath.row];
-            for (CategoryModal * modal in _arrayFavourite) {
-            
-            if (modal.CategoryModal_CategoryID.integerValue == modal2.CategoryModal_CategoryID.integerValue) {
-                Istrue = true;
-            }
-            }
-            if (Istrue  == false) {
-                [_arrayFavourite addObject:modal2];
-
-            }
-            
-        }
-            [_collectionViewFavorite reloadData];
-        
-    }
-    else
-    {
-        [self performSegueWithIdentifier:@"RemoveCategory" sender:indexPath];
-    }
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
-    if (_CollectionViewCategory == collectionView) {
-
-    return 0;
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
-    if (_CollectionViewCategory == collectionView) {
-        
-        return 0;
-    }
-    else
-    {
-        return 0;
-    }
 
 }
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
+    return CGSizeMake(_collectionViewFavorite.frame.size.width, _collectionViewFavorite.frame.size.height);
+}
+#pragma mark - TableView Delegate
+
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Remove seperator inset
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    }
     
-        return UIEdgeInsetsMake(0, 10, 0, 0);
-
+    // Prevent the cell from inheriting the Table View's margin settings
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+    
+    // Explictly set your cell's layout margins
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    RemoveCategoryViewController * vc = segue.destinationViewController;
-    NSIndexPath * indexpath = sender;
-    vc.Deleagte =self;
-    [vc getData:[_arrayFavourite objectAtIndex:indexpath.row] :indexpath];
+    
+    [segue.destinationViewController GetUrl:@"www.google.com"];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    [self performSegueWithIdentifier:@"SegueWebsite" sender:indexPath];
+}
+
+#pragma mark - tableView Deleagtes
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+
+{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+ 
+        
+        WebsiteTableViewCell * cell = (WebsiteTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"WebsiteCell"];
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"WebsiteCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+    
+
+    cell.selectionStyle = NO;
+    cell.labelWebsiteName.text =@"www.zomato.com";
+    cell.btnSelectWebsite.tag = indexPath.row;
+    [cell.btnSelectWebsite addTarget:self action:@selector(BtnSelctedClicked:) forControlEvents:UIControlEventTouchUpInside];
+    BOOL IsSelected = false;
+
+    for (NSIndexPath * index in arrayIndex) {
+        
+        if (index.row == indexPath.row) {
+            
+            IsSelected = true;
+        }
+    }
+  
+    
+    if (IsSelected == false) {
+        
+        
+        cell.btnSelectWebsite.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        cell.btnSelectWebsite.layer.borderWidth = 1.0f;
+        cell.btnSelectWebsite.clipsToBounds = YES;
+        cell.btnSelectWebsite.layer.cornerRadius = 4.0f;
+    }
+    else
+    {
+        cell.btnSelectWebsite.layer.borderColor = [UIColor colorWithRed:26/255.0 green:168/255.0 blue:238/255.0 alpha:1].CGColor;
+        cell.btnSelectWebsite.layer.borderWidth = 1.0f;
+        cell.btnSelectWebsite.clipsToBounds = YES;
+        cell.btnSelectWebsite.layer.cornerRadius = 4.0f;
+    }    return cell;
+}
+
+
+-(void)BtnSelctedClicked:(UIButton *)btn
+{
+    if (arrayIndex.count!=0) {
+
+        BOOL IsSelected = false;
+        
+        NSMutableArray * arrayWebsites = arrayIndex.mutableCopy;
+        for (NSIndexPath * index in arrayIndex) {
+            
+            if (index.row == btn.tag) {
+                
+                IsSelected = true;
+                [arrayWebsites removeObject:index];
+            }
+        }
+         WebsiteTableViewCell * cell =  ( WebsiteTableViewCell *)[_tabelViewWebsites cellForRowAtIndexPath:[NSIndexPath indexPathForItem:btn.tag inSection:0]];
+        
+        if (IsSelected == true) {
+           
+            
+            cell.btnSelectWebsite.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            cell.btnSelectWebsite.layer.borderWidth = 1.0f;
+            cell.btnSelectWebsite.clipsToBounds = YES;
+            cell.btnSelectWebsite.layer.cornerRadius = 4.0f;
+        }
+        else
+        {
+            cell.btnSelectWebsite.layer.borderColor = [UIColor colorWithRed:26/255.0 green:168/255.0 blue:238/255.0 alpha:1].CGColor;
+            cell.btnSelectWebsite.layer.borderWidth = 1.0f;
+            cell.btnSelectWebsite.clipsToBounds = YES;
+            cell.btnSelectWebsite.layer.cornerRadius = 4.0f;
+            [arrayWebsites addObject:[NSIndexPath indexPathForItem:btn.tag inSection:0]];
+        }
+        arrayIndex = [[NSMutableArray alloc]init];
+        arrayIndex = arrayWebsites.mutableCopy;
+    
+    }
+    else
+    {
+        WebsiteTableViewCell * cell =  ( WebsiteTableViewCell *)[_tabelViewWebsites cellForRowAtIndexPath:[NSIndexPath indexPathForItem:btn.tag inSection:0]];
+        cell.btnSelectWebsite.layer.borderColor = [UIColor colorWithRed:26/255.0 green:168/255.0 blue:238/255.0 alpha:1].CGColor;
+        cell.btnSelectWebsite.layer.borderWidth = 1.0f;
+        cell.btnSelectWebsite.clipsToBounds = YES;
+        cell.btnSelectWebsite.layer.cornerRadius = 4.0f;
+        [arrayIndex addObject:[NSIndexPath indexPathForItem:btn.tag inSection:0]];
+    }
+
+    
 }
 
 -(void)DeleteClicked:(NSIndexPath *)indexpath
@@ -223,22 +277,52 @@
     [_collectionViewFavorite reloadData];
 }
 
+
 #pragma mark - IBAction
+
+- (IBAction)actionBtnRigth:(id)sender {
+    
+    NSIndexPath * indexPath = [_collectionViewFavorite indexPathForCell:[[_collectionViewFavorite visibleCells] lastObject]];
+    
+    if (indexPath.row == [_arrayCategories count] - 1) {
+        
+    }
+    else{
+        
+        [_collectionViewFavorite scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:indexPath.row + 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
+        
+    }
+
+}
+
+- (IBAction)actionBtnLeft:(id)sender {
+    
+    NSIndexPath * indexPath = [_collectionViewFavorite indexPathForCell:[[_collectionViewFavorite visibleCells] lastObject]];
+    
+    [_collectionViewFavorite scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    if (indexPath.row != 0) {
+        
+        [_collectionViewFavorite scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:indexPath.row - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    }
+    
+}
 
 - (IBAction)ActionBtnFeed:(id)sender {
     
-    if (_arrayFavourite.count == 0) {
+    if (arrayIndex.count == 0) {
         
-        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-        [defaults rm_setCustomObject:_arrayCategories forKey:@"KuserCategory"];
+//        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+//        [defaults rm_setCustomObject:_arrayCategories forKey:@"KuserCategory"];
+        [[[UIAlertView alloc]initWithTitle:@"" message:@"Please Select Website" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil]show];
     }
     else
     {
         NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
         [defaults rm_setCustomObject:_arrayFavourite forKey:@"KuserCategory"];
+        RootSidePanelViewController * VC = [self.storyboard instantiateViewControllerWithIdentifier:@"RootSidePanelViewController"];
+        [self.navigationController pushViewController:VC animated:YES];
     }
-    RootSidePanelViewController * VC = [self.storyboard instantiateViewControllerWithIdentifier:@"RootSidePanelViewController"];
-    [self.navigationController pushViewController:VC animated:YES];
+   
   
 
 }

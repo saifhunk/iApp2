@@ -18,6 +18,9 @@
 @property BOOL IsFromLogin;
 @property(nonatomic,strong)NSMutableArray * arrayFavourite;
 @property(nonatomic,strong)NSMutableArray * arrayCategories;
+@property(nonatomic,strong)NSMutableArray * arraylinks;
+
+
 @property (weak, nonatomic) IBOutlet BLLoader *Loader;
 
 
@@ -25,10 +28,13 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSidepanel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewFavorite;
-@property (weak, nonatomic) IBOutlet UICollectionView *CollectionViewCategory;
 @property (weak, nonatomic) IBOutlet UIButton *btnFeeed;
+@property (weak, nonatomic) IBOutlet UITableView *tabelViewWebsites;
 
 #pragma mark - IBAction
+
+- (IBAction)actionBtnRigth:(id)sender;
+- (IBAction)actionBtnLeft:(id)sender;
 
 - (IBAction)ActionBtnFeed:(id)sender;
 - (IBAction)actionBtnSidepanel:(id)sender;

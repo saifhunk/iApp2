@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfEmail;
 
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet UIView *ViewTfLogin;
 
 #pragma mark - IBAction
 

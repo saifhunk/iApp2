@@ -51,81 +51,86 @@
 
 -(void)SetupUI
 {
+//    
+//    _Loader.lineWidth = 50.0;
+//    _Loader.color = [UIColor grayColor];
+//    [_Loader startAnimation];
     
-    _Loader.lineWidth = 50.0;
-    _Loader.color = [UIColor grayColor];
-    [_Loader startAnimation];
+    [_Loader setHidden:YES];
    
-    NSString * strId;
+   // NSString * strId;
         _arrayDataTop = [[NSArray alloc]initWithObjects:@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg", nil];
     _arrayDataBottom = [[NSArray alloc]initWithObjects:@"5.jpg",@"3.jpg",@"4.jpg",@"1.jpg",@"2.jpg", nil];
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [_collectionViewBottom reloadData];
+    [_collectionViewTop reloadData];
+    //NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
-    if ([defaults rm_customObjectForKey:@"KuserCategory"]!=nil)
-    {
-      NSArray *  CategoryArr = [defaults rm_customObjectForKey:@"KuserCategory"];
-        
-        CategoryModal * modal = [CategoryArr firstObject];
-        if (modal.CategoryModal_CategoryID.integerValue == 4 || modal.CategoryModal_CategoryID.integerValue == 7) {
-          
-            strId = @"1";
-
-        }
-        else
-        {
-            strId = modal.CategoryModal_CategoryID;
-
-        }
-        
-        
-        for (int i = 1; i < CategoryArr.count; i++)
-        {
-            
-            CategoryModal * modal = [CategoryArr objectAtIndex:i];
-            if (modal.CategoryModal_CategoryID.integerValue == 4 || modal.CategoryModal_CategoryID.integerValue == 7) {
-                
-                strId = [strId stringByAppendingString:[NSString stringWithFormat:@",%@",@"1"]];
-
-            }
-            else
-            {
-            strId = [strId stringByAppendingString:[NSString stringWithFormat:@",%@",modal.CategoryModal_CategoryID]];
-            }
-
-        }
-        [self.view setUserInteractionEnabled:NO];
-        
-        [iOSRequest getJSONRespone:[NSString stringWithFormat:kGetFeedById,KBaseUrl,strId] :^(NSDictionary *response_success) {
-            
-            [self.view setUserInteractionEnabled:YES];
-
-            [_Loader stopAnimation];
-            [_Loader removeFromSuperview];
-            if ([[response_success valueForKey:@"Status"] integerValue]==1) {
-                _IsapiHit = YES;
-                _arrayDataBottom = [[NSMutableArray alloc]init];
-                _arrayDataBottom = [FeedModal ParseArrayToDict:[response_success valueForKey:@"data"]];
-
-                
-                 [_collectionViewBottom reloadData];
-            }
-            else
-            {
-                [self alertShow:@"Error" :[response_success valueForKey:@"Message"]];
-                
-            }
-
-            
-        } :^(NSError *response_error) {
-            
-            [self.view setUserInteractionEnabled:YES];
-
-            [_Loader stopAnimation];
-            [_Loader removeFromSuperview];
-            [self alertShow:@"Error" :response_error.localizedDescription];
-        }];
-        
-    }
+//    if ([defaults rm_customObjectForKey:@"KuserCategory"]!=nil)
+//    {
+//      NSArray *  CategoryArr = [defaults rm_customObjectForKey:@"KuserCategory"];
+//        
+//        CategoryModal * modal = [CategoryArr firstObject];
+//        if (modal.CategoryModal_CategoryID.integerValue == 4 || modal.CategoryModal_CategoryID.integerValue == 7) {
+//          
+//            strId = @"1";
+//
+//        }
+//        else
+//        {
+//            strId = modal.CategoryModal_CategoryID;
+//
+//        }
+//        
+//        
+//        for (int i = 1; i < CategoryArr.count; i++)
+//        {
+//            
+//            CategoryModal * modal = [CategoryArr objectAtIndex:i];
+//            if (modal.CategoryModal_CategoryID.integerValue == 4 || modal.CategoryModal_CategoryID.integerValue == 7) {
+//                
+//                strId = [strId stringByAppendingString:[NSString stringWithFormat:@",%@",@"1"]];
+//
+//            }
+//            else
+//            {
+//            strId = [strId stringByAppendingString:[NSString stringWithFormat:@",%@",modal.CategoryModal_CategoryID]];
+//            }
+//
+////        }
+//        [self.view setUserInteractionEnabled:NO];
+//    
+//    strId = @"1,2,3,5.6,8,9";
+//        [iOSRequest getJSONRespone:[NSString stringWithFormat:kGetFeedById,KBaseUrl,strId] :^(NSDictionary *response_success) {
+//            
+//            [self.view setUserInteractionEnabled:YES];
+//
+//            [_Loader stopAnimation];
+//            [_Loader removeFromSuperview];
+//            if ([[response_success valueForKey:@"Status"] integerValue]==1) {
+//                _IsapiHit = YES;
+//                _arrayDataBottom = [[NSMutableArray alloc]init];
+//                _arrayDataBottom = [FeedModal ParseArrayToDict:[response_success valueForKey:@"data"]];
+//
+//                
+//                 [_collectionViewBottom reloadData];
+//            }
+//            else
+//            {
+//                [self alertShow:@"Error" :[response_success valueForKey:@"Message"]];
+//                
+//            }
+//
+//            
+//        } :^(NSError *response_error) {
+//            
+//            [self.view setUserInteractionEnabled:YES];
+//
+//            [_Loader stopAnimation];
+//            [_Loader removeFromSuperview];
+//            [self alertShow:@"Error" :response_error.localizedDescription];
+//        }];
+//        
+//    
 
 }
 

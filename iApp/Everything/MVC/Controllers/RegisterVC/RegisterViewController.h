@@ -13,36 +13,32 @@
 @interface RegisterViewController : UIViewController<UITextFieldDelegate>
 
 @property BOOL boolInternetCheck;
+@property(nonatomic,strong)NSMutableArray * arrCountries;
 
 #pragma mark - IBOutlets
 
-@property (weak, nonatomic) IBOutlet UILabel *labelName;
-@property (weak, nonatomic) IBOutlet UITextField *tfName;
-@property (weak, nonatomic) IBOutlet UILabel *labelEmail;
-@property (weak, nonatomic) IBOutlet UITextField *tfEmail;
-@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
-@property (weak, nonatomic) IBOutlet UILabel *labelGender;
-@property (weak, nonatomic) IBOutlet UIButton *btnMale;
-@property (weak, nonatomic) IBOutlet UILabel *labelCity;
-@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+@property (weak, nonatomic) IBOutlet UIView *viewUsername;
+@property (weak, nonatomic) IBOutlet UIView *viewGender;
+@property (weak, nonatomic) IBOutlet UIView *viewCity;
+@property (weak, nonatomic) IBOutlet UIView *viewState;
+@property (weak, nonatomic) IBOutlet UIView *viewCountry;
 @property (weak, nonatomic) IBOutlet UIView *viewPassword;
-@property (weak, nonatomic) IBOutlet UIView *viewUserDetial;
-@property (weak, nonatomic) IBOutlet UIButton *btnCurrentCity;
-@property (weak, nonatomic) IBOutlet UIButton *btnFemale;
-@property (weak, nonatomic) IBOutlet UILabel *labelSignUp;
-@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
-@property (weak, nonatomic) IBOutlet UITextField *tfReEnterPassword;
-@property (weak, nonatomic) IBOutlet UIView *viewMale;
-@property (weak, nonatomic) IBOutlet UIView *viewFemale;
-@property (weak, nonatomic) IBOutlet UITextField *tfCity;
-@property (weak, nonatomic) IBOutlet UITextField *tfCountry;
-@property (weak, nonatomic) IBOutlet UITextField *tfState;
+@property (weak, nonatomic) IBOutlet UIView *viewConfirmPassword;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnCountry;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnGender;
+
+
+
+
 
 #pragma mark - button actions
+- (IBAction)ActionBtnCounty:(id)sender;
+- (IBAction)actionBtnGender:(id)sender;
+- (IBAction)actionBtnArrowGender:(id)sender;
+- (IBAction)actionBtnArrowCountry:(id)sender;
 
-- (IBAction)actionBtnMale:(id)sender;
-- (IBAction)actionBtnCurrentCity:(id)sender;
-- (IBAction)actionBtnFemale:(id)sender;
 - (IBAction)actionBtnCancel:(id)sender;
 - (IBAction)actionBtnNext:(id)sender;
 

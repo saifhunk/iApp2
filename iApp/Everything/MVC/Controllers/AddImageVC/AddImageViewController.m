@@ -45,14 +45,14 @@ NSData * signUpImageData;
     _btnDone.layer.cornerRadius = 5;
     _btnProfileImage.layer.cornerRadius = 82;
     
-    if([[_dictUserInfo valueForKey:@"gender"] isEqualToString:@"male"]) {
-        
-        [_btnProfileImage setImage:[UIImage imageNamed:@"ic_male_pic"] forState:UIControlStateNormal];
-    }
-    else {
-        
-        [_btnProfileImage setImage:[UIImage imageNamed:@"ic_female_pic"] forState:UIControlStateNormal];
-    }
+//    if([[_dictUserInfo valueForKey:@"gender"] isEqualToString:@"male"]) {
+//        
+//        [_btnProfileImage setImage:[UIImage imageNamed:@"ic_male_pic"] forState:UIControlStateNormal];
+//    }
+//    else {
+//        
+//        [_btnProfileImage setImage:[UIImage imageNamed:@"ic_female_pic"] forState:UIControlStateNormal];
+//    }
     
     }
 
