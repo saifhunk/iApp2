@@ -259,10 +259,26 @@
     }
     else
     {
-        return CGSizeMake(self.collectionViewBottom.frame.size.width/2.2,self.collectionViewBottom.frame.size.height);
+        return CGSizeMake((self.collectionViewBottom.frame.size.width/2)-7.5,(self.collectionViewBottom.frame.size.height/1.6)-5);
     }
     
 }
+
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
+{
+
+    if (_collectionViewTop != collectionView) {
+
+    return UIEdgeInsetsMake(0, 5,0, 5);
+    }
+    else
+    {
+        return UIEdgeInsetsMake(0, 0,0, 0);
+
+    }
+}
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
